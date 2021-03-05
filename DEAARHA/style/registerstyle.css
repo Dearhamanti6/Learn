@@ -1,0 +1,14 @@
+.form-horizontal {
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+
+.box-registrasi {
+    padding-top: 30px;
+}
+
+.tombol {
+    padding: 30px;
+}

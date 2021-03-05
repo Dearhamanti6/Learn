@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIWIKODE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Yantramanav'>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow " id="mainNav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="admin.html">SIWIKODE</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link  mr-3" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="rekreasi.html">Wisata Rekreasi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="kuliner.html">Wisata Kuliner</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="register.html">Registrasi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mr-3 active" href="admin.html">Admin</a>
+              </li>
+            </ul>
+            
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-success my-2 my-sm-0 text-light login-button" href="index_login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+      <ol class="breadcrumb" style="background-color: rgba(0, 0, 0, 0);">
+        <li class="breadcrumb-item ml-auto" ><a href="main.html">Home</a></li>
+        <li class="breadcrumb-item  "><a href="admin.html">Admin</a></li>
+        <li class="breadcrumb-item text-muted " aria-current="page">Kelola Komentar dan Testimoni</li>
+      </ol>
+
+      <div class="container-fluid">
+          <p style="font-size: 25px;" class="text-center mb-5 text-light" >	Pengelolaan Pencatatan Komentar / Testimony Tempat Wisata</h4>
+          <div class="table-responsive">
+            <table class="table table-striped table-dark">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="text-mg">No</th>
+                  <th scope="col" class="text-mg">Users</th>
+                  <th scope="col" class="text-mg">Halaman</th>
+                  <th scope="col" class="text-mg">Komentar</th>
+                  <th scope="col" class="text-mg">Action</th>
+                </tr>
+              </thead>
+              <tbody class="putih">
+                <tr>
+                  <th scope="row" class="text-mg">1</th>
+                  <td><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.cnbcfm.com%2Fapi%2Fv1%2Fimage%2F105894488-15571466884731u8a0002r.jpg%3Fv%3D1557843920&f=1&nofb=1" class="" alt="Bill Gates" width="70px" height="50px"><span class="text-mgs"> Bill Gates</span></td>
+                  <td><a href="detailgurame.html">Taman Lembah Gurame</a></td>
+                  <td>the place is very beautiful and comfortable. can i buy it?</td>
+                  <td>
+                    <a href="detailgurame.html" class="text-success"><i class="far fa-eye"></i></a>
+                    <a href="" class="text-primary"><i class="far fa-edit"></i></a>
+                    <a href="#" class="text-danger"><i class="far fa-trash-alt"></i></a>
+                  </td>
+                                
+                </tr>
+                <tr>
+                  <th scope="row" class="text-mg">2</th>
+                  <td><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTExMWFhUWFRcWFRUVFhUVFxYVFRcYFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0dHx0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSstLTcrNy0tK//AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAGAAMEBQcCAQj/xAA8EAABAwIDBgMFBwQBBQEAAAABAAIDBBEFEiEGMUFRYXETIoEHMpGhsRQjM0JSwdFicvDxsjSCktLhJP/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACIRAAICAgMAAwADAAAAAAAAAAABAhEDIRIxQQQyURMiYf/aAAwDAQACEQMRAD8AqHSmSQWHdcY1M5tmkdknz+C8O37rhRsVxMSuFhoNbrPwqiPFAbXU6Bhb3UJlbZXWHWcASh2IlwzlrfMd6sNnMr5SeAKoMUcTbkpWA14jFuJKyUXHY+9Go0lDn10UfHGOa2w1VVhuOyNbwISlxkv94IeZVQKA9h5DG6r0y3dcKq8cu0CsKWHqvOlp2aIk1E19Fe4CRl1QlUVFnKfh2JkaLXFkcZWwkrDxq9UKlqRYdVNXqJp9GIkl4SvUwEqvEKHO4K0XJbxSasAdqcFA1CrpxluEYzAW1Q/i0Ld6xyQSWtFxZU0IBJvzU+UgBU/iZHaLuoqcw0XOpcdGhzUvHBRo2B29enquXO5LF7Y6PamMW0XWFjXVcglMseQ8WXTF/pLQWwssLqbDKbBV1BUgtAVmyPQFdaaa0Yjs4JA1UzOMt+FlGkPlTFQMzD1CdADOK7SFhexp3G3ZDsdUXguvcneq+rP3j2ngT9UqSTK09lhO/DSNEunfYlPTVV9FVQVGa67hdcrNKXowjwyQeG2+/X6lJR6JpyDXn9SkrokBtpGWLQOqp4KYu3K/x4ZpcvwTuGUltLKpScY2grYLzUrmnVXuGRODAeCtK7DrtJsomFzEkRkcVMMzlpg4jtfGMg5pilw4ula0cVZYrCGlgG/6pule7xmkb26rSTEloN27OlsY14KkqW5TkV87aK4Dba8VRVkoc8O5LmyqPaLjY42PKF46tI0uuGy5lEnbd2i5UreymSGEkqeBYLnDIQBqpMpCylO3SAtcCxCzgHbkXgoFwhl3tHUI6aLBej8RtxZnMSS4e4rzVdZA4Vw5p56/5vXoXqVgCW2GO1FMBalfI073suQO9tR6oapdsmSj7weGeGt1qOYIN2h2AgmzvhJile7MdSWOPG7ToNeSHGMuxp0UhqAdQbhIVDRxQtV0lVRHLMzyXsHC9r77diE/T1Qk3HXh+/queeDjtGqnYQOnvuT0AuqSKoLTYqxoqsErBxoqy3bACowpwHLx1SQdE5SHMVtCSejNlpQM1RFCNwVCwhpV3A6zQei2TXKkQP1ejfRRoACxe1k12ack1Rfh/FaCM1xqINqHcrlV8f5lc7QAeKe5VBO4glZspDVO73lbUkJAuVSUR580TU7w5tggbLnC6QGJpPX6lJWeGMtE0d/qUkhGUZ89UfgiGljs8dVV4Rh+b7zmSfmrWS7XtKHH9E5FtX0X3ZKB6OS01hzK0OskvAeyzTDWn7QT1KmMFY0yfV1ZbO297ZT6K0w6QPeSOQAPMqkr/wAX0/dP4DG9s+nu7yFTeh0GzcLcPMVW4pYIgq8Rsy3GyE8XkvYlcr42VseoXWGq8pRmeVFM3l0U3DyAL31WMlV0NE2SbKopmcTouCcx3p9kduyhRoLLLDaotII3hHdFXNkFxvtqFm8T7HRFeG1zYacySGwvr6BbfGbU68FLYROISaeqD27Y+J+DC5w5k5Rfp/Kkw43U3GeJttfdd8Lghdv8sQWGYUB/NIP6KibjUt/NTm3NrwT8NFOo8Uil0aSHfpcCD8OKpSTJeOSJ4AKQbbimr23f75ldNm/ULfRUQcV9FHOx0crA5jhYg/seHdZXtP7P56cmajJkjBuYyfvGAfpJ98fPutYkvw/zqm2vPFFjMmgOdrXEWuNeh3EfFezRZCCNyNtpcHYGmWNoBLiXW45reb4j5oTkbwK5ZpRlRsv7ImUc7HAc07Svs4qlyhhBvoptJNmNuqq6jZNF1O/cQVfmW8Wn6f2QdWBw3ItpG/dt7D6KcNuVkyEJi2MX5WT1G8ZLLnEiBFfoqnDathi3663XUyCJtHSxNGbS/wA0G4lZpuUSY5qAeqGdp4vuwR0UtlIro2+Y25/VGOGUeRgPRCtPHbLzLm/VHr2WjCALPDx9231+pSXeHD7tvr9SvFIgMoQ1lO3Xgojq2MkapYxROZBbNw1CzmeRzXnzH4q/sxSVGqSYkzwyL80L4DE11SbngT3QzFUuP5irbCfxQb8Cp4tMpF3idEDOMvEblZYXS2kVC+uyTDiiDAszpwTuWkYqgbCGbDSdShnHo7EI5rX2jQNjUoIv1XP8hJSWgiyFMw5QlATay8kqAQOy8gks4LnppFuiZGHcFZU1RoAVFbVNtovYpQSsZWBdUrmA3UPb2oBZSQMOk0tjbjY5nD4Nt6p1rAQqPaqV3iUjG6PYZpIydwOVrdfRxT+PNcqZW7C/CqIMaFaxOCzeLG6yMgPex442FjZFMVS+WLNGd43rfo6avsJZa2Jgu97WjqQFCOIUVQMoka88wd3YhAdc6Jr89QQbG3m1F+QCucL2kocoYx0X9lgD8LLSMlXREsdPsvzVPowHNJkg/Mz3nNv+ZpO8DkrPC8epqkubHI0uabOZcFwPYcLKviyPZYDykbuGqzDbjZp8R+1Qktcw3u02cBfeCPT4qoTrRnPHZuBvew01+X7Lu9x+yybYf2ogjwq1zW2AyyE2DuBH91tbdCtRgqWSNEkbg4OFw4a3B3aLY5z2SVurDxFiOnZAVfHle5p1LSRfnZG9ZCCQ61nDT0QZiQ+8kP8AWfqsM6TSsuDKV3vgFS3s8MgjmmKxgFnDeF0KjxRYcCsv5GojaVl8/wAzL9Fa0VaC1relkOUlSWtylOYU68nYowyfIhsvMemvFlHEIMw4HPlud6Mq6IlvohigjtMRxXdRJZYpF90hfFjmY0dUYVrCWkdFn2O1JYcnwUtUMkQxkvj5XB+aO6keQILw73md2/VHk7PKEkNkrD/w29v3ST9EzyN7JJUKzMtsal7YwL8AgE0r3G6P9t22aD1CEZK8N0spjNp0aOHK3+FcxtjYqzpJMrgeirpDd1+q6E9lqzNF2HAvaTvRhgk33oFkC7Ovzzi+4BGeHTg1QbybdHOh1ZoDaYSCxQ/tDgDAw26q0lrHNHlCGNocQnyG+5ZzmpPoajQLUTMz7dVf12Ftay6GsLv4gKMMa/C38kOK4sLKGJ4VjRsuQqcRlWVA4rzclrSGmXmbKEEbaTudV0obvtKPQtP/AK/JGV7hCcxBxSmDuEchF+dnD9yrwQp8i07aKcYDNIyJ0ZLJml2dxzEG/ukduXVbPsnhvh0rQ7ebk9Lm9gq+OlaLWsL6D1RTCWtY1rSNB9F1Rd9mk1S0BW0ezpErZm8DpxAJtqRx3KDhewVK6V80jLl5LrX8oLjdxA6lH1S64sVFYLbkfV6HfJb7O6PDYoWZWCw7k/VQsUga5jmkXBaRb0U18ygVMimTQ4Rfp87YxR+HPLH+lxt24Im2P2+qqQsYbPiaMuU6GwPFw3+qW3WGmOp8S3lfa/Q7ihd0OVzvU27nRdGOXJHPkjxkfTeHY5DVQGSN4cANbcCB/KEGyl1yd5JJ6oX9mNeWTSxA+V7C6x/t837fBEkMnlWPyLpCiM4hB5SVVYDJZx7onDczCOiG6CLJM4Lli24tMG1ZZV7+IU7ZWB0jnO4A/NV+LygNUzYSod4byNRmW/x0Q6C8WGhKoZKFonzDiqSsxyf7SW28t9SFcUE2d9yvQJLqdoy+izDbCmtK13DMtQm3IA26b5VEykM4SMz2W/UEeSnyhBGzMNgwnmEbT+6FCGyyo/cb2Xq8ox5G9kkhGY7XMLrN5kIaq8IaLOJvwsi/aymOQOse6AMTqnki7lKjuzRy7Q3JHYnoop3p+MpmYLZrRlEvNjmXlPZXosKu9+CpdiffddSapmar0duCzXZb+ocPrsove6oMZxQvZ8QvKykOT3ih6QPyanmqUUQpSJOHk3AG9OY7Xyts0rnYyTNUtYeRUv2ixhr47dVjT5GmqsgUs7i1XuGyADVVNNT2hB6XRTS4ZEIuZsPNfeh4HK2jmy/JjilFNfY7iJd7uqz3aOtLMTicdMhY09nXB/5rVMNiZGzXrvWL7eS56uYjgRb0aE8eBRVnRy2azisjnUxynzaEW5grvDsPnqmt8V8sWUBwMb8t3aWJ01HQ6aoXpseJo2zDiwE34G2vwN0sG2oqHgGOS9iWi97/AA4hc6i7PRS5LTNWigLW2c7MedrLh6F8O2xlfZklPJmvbM1jsp4X1CIxLcXVsycWns5e5RZE+8qFVzhoN1my0Z97S6xrS2O1y/d0y2N0CVzvvCeg/wA+as9ssT8eqcQbhnlG7TUXVJK68vqPkF14o0jkzSuQQ7O4g6CdsrbXbbQ6gg5muB6WKOvtoyXWWUs2v+cyUc4IwzNLb6ga9uBRmg5LRg7oIcMxsOu1QH1A8ZMUlEY3EKKyEun05LB4tgmWuIm7Spew1cGMe0/qUGvppA09l3sszyG41LiqwxcRovYWtc5z7b1LwkguXOFxfdn1XeFts4rpUmFFrMs525qrnL1WjTbllu2n4iXYFxs9UXyDqEbSjyhA+zbLZSeYRvI7yhJDZa0bfI3skvaN3kb2XiBADtTUhsPW3os/rKQPFwdyLNrYHPjs253WChYHgEhbd7TcqY2y5LZU0GGNcLX/ANpY5s3LCzxCPLpfpfirevoJYHtc1hIzC9u6K9riX0TgGalo/wDq0criQkrMvwmr8N46qUyrAqM3MarnDdmpp7OaNN6j1WDzMmDLapxSoUmEtfiNmqmdVgtt0KVVhdRbUKKzDZBqU6IT2dbPV5hqg63Aj4qbtbiZnkbp7o+qm4FTxNkDngXym1+a52ipmPkBbYWFjbms20zRMsKJ7RE2/wClWmGNBZv0HXRDAYcoCnUtcYxl3jojl4DiiXUYoHXbe1iVmmPPvLIf6lqMdHTPYXOAzdTrdZPtCQ2aQN3ZtO1ltJRVUJN0EGwOItLX0r+pb/a7fbsdfVGeHVE7MrGxg5dAQOCxmCpdG9sjDZzTcfuD04LZNkdq45GA/mt5m8Qev8rizQado7vjZmlQbYbny3fvXcr7Ksl2liDbkgAbySAPiUN4jtmx3lhBkPDLo3/y/i6xb/Dbi27YUVVeGjUoNxbE5akmKnBPBz/yt/7uJ7LyjoZ6o3mdZn6G3APRx3lFsWHtYwMY0AW4BEY32U6Rh+N0DqeYscb6A376/VV8DryeqO/aZhRaWygdD8TZAEWjvVdsHaPPyxpkmnk39CPqijAMSMbmuB3HKeo/2hCHee30VlRvIza7rOH0cPmVojI3TCoYZo/EuDf4jp3VEKdrao23FDOA4i8WaxxF+HAjkivDaDxHh4cbcR1SYNBrBQxmM5rbuKC2sbHOY27rkq1cZnTCJrrCxJ7BRqfAZBV77jLe57ok1Qolzh8dmeiaoPxCreLD3gWtwVdT0r2ykEKUNkyfcs42riGYkrSJ43W90oA2zgc0EkEXQA9gb2kNaBfcUaGI5N3BZ/sW17ZGlzTlOgK0+Wqa1uqEkxtgRPtVJE4x5D5dNySlV1VAZHHy7+nJJacYkWwliwZg4KUKRreCcE45pGRTVFWRaijY62m5R8ajb4BFuCcOJszZbi6ibQVobGT0R4BVbCzMbDY6EEj5lV+JzxGsG73f3QzNiL2PuLhp/ddsLZCH38w4qOdCa8C7FaiEN4IYFew6W4n1RBhuz4laHOJPdRNo8JZCBlCtvQow2CVVMM4ACcqXGwt8l7QYNNLMDlOXmtDw7ZyNoFxcrJQZYH0ODSSBp3BFeF4CxtrjXqiCnoQNAFMjpAFaiKzMNsMIYDcDmsmx8WlcP7f+IX0ZtbhwdE7nYr522nZlqpW/pcB8GhMCua28bjye0fEO/hTsPZbK89W/J2t+4ChRnyuHEub8s38hXNBAXwRRgXc+oyNHcNFj0vY/FDBGx7SbO/aaKnnsM1PEc7Olm5yOoyX+PJC1BEwWyha59hIhMR/NGWOI5uacx+JPxWWUVMYZTFILPacpHXn2O/1WGWHp1fHn4FGE0yv44NNyjYZCA0XVpGc3u6D9XD05lTGJc5FDtNg8c0LmSEAEHXlxWA4lh/hOcCQSx2V1uLfyvHRfQm1U0FPC+WXK5zWksY92rncNOA7BZJjmIioJk8JjCzyExvbZzHC/mBtmYRucNxBC1gnZnNpoEHwkG/P68vj9VJoni+vEEfH/AGpLqa2h3Hc7hbhe3FRp6csN7afQ8D2PNanMWOF1GU26/PgQjTCMUe3UHhr0/wA1QE7eCOhHbiEQYFU3NjvGh6g7iENWUg1w3EiJPEJ11VzgeN5qo5jplFgqA4Q82IN2nXRVcNLI2qaASNL3/ZZysVGx02JNcbJR1DDIRxQlgZcHm5urNmYSXVJiaCm7UGe0yJrqY2tmuLfFXjahCe3Ezi0crp2ASYPRxeCywGjAoW0LAQWg8NFCwerPgA3/ACqkq6175L5tLpJ0DKOqw55eSBpdJHVPTsyjckq5E0VmJYi9tQA06cQiaCe7PRAtY4+N6otpQcg7KUW0D1Ub1Y9VY7Tfheip5T/+kKy2kePC9EvBgZtIMkd+yY2apS9pdfS5CtMXoXVEOVo1sFO2QwOSNmV3PelViYa7Ps+6HZOV+FNkILk3Snw22Ckxvc7etBHkFGxosAptPTXXMbFIjfZAEhlOAuX6LzxiuboER62kEjTfdYr5Zx4l00km/PK8jsXHL8rL6c2mq/DpJnbrRP17tIXzXU0+fNb8oHpcgCyBkLCKMyyNaBfzNv2zAH6rSPZZsyJ8Qmc78Olc/Lw+8c8tYR2DHfJD2yFI2Jr55NLOa0f2stPIf/GMN/7ka+x7EXQyysmGV1Wzx4ydM5DnZg3n71/VJgariEzYojI7c0a+ugHxss7c9stSZj5pHWAaBuyiwACu8bxM1GamaPLezncgLHT1+qf2fwVsItGN/vyO1c7oOXZZyd9G+NcVbOqalIAfUHK3c2MXcXHfazdSd/lCfy1UpDWt+zxfqJaZSP6W6hnrc9ldspGZg613AWDjvAO8Dl6KQGppJEynZUUWztPGScmdx958hzuN997qBjGwtDUDWERv4SQ/duHw0PYhEuVJOyDDse9ntRR5srvHp9SHWtJH/c0aOHb4ITy5fK7zN4W106fwvpmVocCDuOiwn2nYQaCo8RovBMb2H5JONuVxr8VSY/AadALCxuOB5BdUUpYb/mafi3imIpwfMw9xz690+1zX2cN+4gciqJNm2JAnhIv7p8vY8PkVbzYKL3I1QD7LsSdHK+I7i2+vAtcBf5rVPtN+CQilpsLDXXCsmUq9evWvISA8fSFD+1FEcmo4hEZqiFX4kPFFigCkmw0iHym2m5Z9VVr45S2+47lq01wzKOSyqswqY1gJYcma5KhxTGgnpZZ8g04JIppmtDG6cEkuP+jACkqS9wc7fdG9NP8Ad+iEZ4CJPKNLompG3aAqj0Jg/ISai9leT0XiAAqVDhzb3IUiSYN0aE6CxilomRjVO+LfRq4ERdqVKjiA3JiPYI+amMTUTU+GoA7Diu2PTbE6AhAONcusybskmBV7X0plo52t3+G4i39LSbLAaOpY2Ga/vvLMo5Na5rrnvZfShvZZ1tpsxTtjkEcbWWgllc4AXLtA0c954ckWBm9B4lU+OlYdJH2NuRsXfJt/S3FbPtBQU8VLEDGC6DKKexs5rwLCxHCw152WReyuvigrHOmF7xHwzvs+43dxcLWJnGeVpdoyNudw/qd7rfgpk9FQVs8wKhyND5XW4k8XE8B0CLaM3Fw3K3hfeqWnp8zw94va2SPgBwLv4V20He4+iiJrMkBy9L1GzpZ1RnRJbIk5yhukXAmSsfEkvcgL2x0wlw6U8Y8rweRa4fsSjEyoM9qk1sOqOrQPi4BNMKPn6lqiw3Hc/wAq5pKoBwI3O0I5HmOn/wBVNTxXa48rf59U5GSNOt1bM7NS2EmvXs6sLT3yj/1Wvwjf0WP+yykdJN4vBmUerr/wVsUQQAiF4U8AuXMQA2QmzGE5YpEKQIz4ky6mbxCn5FyWoAh+A3kkpJiSQMH6amB1spbnsYOqguqydGBOw0vF2qLA9dI6TdoFLhgsuomJ7cgDlsadYF61y7ATEehi7DSuWApzVACaxdgLkL26APcy7aFw1OosBZkN7eQEUs0oF8sErXAcnAFr7dC34E8kSWTVbTNljfE7Vr2OY4dHCx+qBGVbJ7KRs+zSyN0cy+bfkkGvYtII05o8jZl0Au4nMeruF+gCnPhbG1rAPK0Ad7Dyj5Ktpc7jkHvb5HcBf8oKzmzfHH0tIZg3Rvmcd54BSG33uOq8p6cMFgO54pPfySK7ej0uXhem3OTTnIsdDr5E2XpvMuXOQFHYegz2ukjDpOrox3u8IzjbxO4IB9sdRehPC8jAPQ3/AGTj2TLoxuhboR29VOxWnAy23lRMMad6lTuLnZh7rfKO9ltZga97HWj7K423zHXnlaB9Voyz/wBjf/RH+mV4+OV37rQEgPQV7qvF6CgDxeXSL1yXpAJy8CQcvSUgPLJLmxSTCimhiA0ATzWJJKR2dgJ5sd0klQM6DV0AkkkB0xydvdJJUhHgK9XqSTA7YF3lSSQB6kLb+SSSPARVVwJBdxJs0dSbBdUDGxDKPM86k9Ukll6dC6okyOO4nXjZckLxJAI4cU2QkkkUcFyejiXqSAGaqTXIPVZv7YzeGGM6AyZj2a0/yEklUeyJ/Uy6WUNFhv8Aom21Voy0cXA/58F6ktTA3r2T0Zjw+Mn87nP9Nw/4ozBXiSAOl65JJIBole2SSQMVl6F4kgR1deJJJAf/2Q==" class="" alt="Dea Rahmadhani" width="70px" height="50px"><span class="text-mgs"> Maudy Ayunda</span></td>
+                  <td><a href="detailgurame.html">Taman Lembah Gurame</a></td>
+                  <td>ikannya banyak, tempatnya nyaman, cocok buat merefresh pikiran disaat penat belajar.</td>
+                  <td>
+                    <a href="detailgurame.html" class="text-success"><i class="far fa-eye"></i></a>
+                    <a href="" class="text-primary"><i class="far fa-edit"></i></a>
+                    <a href="#" class="text-danger"><i class="far fa-trash-alt"></i></a>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  <th scope="row" class="text-mg">3</th>
+                  <td> <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flangkahsepi.files.wordpress.com%2F2008%2F04%2Fwarga-tua-2.jpg&f=1&nofb=1" width="70px" height="50px" alt="Warga"><span class="text-mgs"> Warga sekitar</span></td>
+                  <td><a href="detailgurame.html">Taman Lembah Gurame</a></td>
+                  <td> enak pisan nih disini, tempatnya asri dan nyaman.</td>
+                  <td>
+                    <a href="detailgurame.html" class="text-success"><i class="far fa-eye"></i></a>
+                    <a href="" class="text-primary"><i class="far fa-edit"></i></a>
+                    <a href="#" class="text-danger"><i class="far fa-trash-alt"></i></a>
+                  </td>
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          <br><br>
+          <a href="#" class="btn btn-primary">Tambah Baru</a>
+      </div>
+    </br>
+  </br>
+</br>
+</br>
+      <div class="container-fluid footer-copyright">
+        <div class="row">
+            <div class="col">
+                <h4 class="text-center text-white p-3 develop-footer"></br>Deahalim copyright@2021</h4>
+            </div>          
+        </div>      
+    </div>
+  
+  
+  
+  
+  
+  
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/dark-mode-switch.min.js"></script>
+        <script src="js/script.js"></script>
+  </body>
+  </html>
+  

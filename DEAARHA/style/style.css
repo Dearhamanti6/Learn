@@ -1,0 +1,87 @@
+body {
+    font-family: 'Yantramanav'!important;
+    background-color: rgb(0, 19, 32);
+}
+
+.siwikode-top {
+    padding: 20px;
+    color: white;
+    background-color: rgb(1, 19, 19);
+
+}
+nav {
+    background-color: rgb(1, 22, 29);
+}
+
+.breadcrumb {
+    background-color:rgba(89, 104, 109, 0);
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.e {
+    margin-left: 50px;
+    color: white;
+}
+
+.card-deck {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.login-button {
+    background-color: rgb(56, 114, 100);
+}
+
+.develop-footer {
+    font-size: 14pt;
+}
+
+.copyright-footer {
+    font-size: 12pt;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.footer-copyright {
+    background-color:  rgb(1, 18, 22);
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.box {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 60px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.col-sm-12 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb-margin {
+    margin-left: 50px;
+}
+
+.btn-tombol {
+    background-color: rgb(59, 186, 156);
+    border-color: rgb(59, 186, 156);
+    border-width: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+img {
+    border-radius: 10px;
+}
